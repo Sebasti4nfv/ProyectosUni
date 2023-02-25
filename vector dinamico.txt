@@ -1,0 +1,137 @@
+//Con datos ya ingresados
+
+
+#include <iostream>
+#include <vector>
+#include <string> 
+
+using namespace std;
+
+struct vendedor
+{
+	string codigo;
+	string nombre;
+	string apellidos;
+	int edad; 
+	float sueldo;
+};
+
+int main()
+{
+	
+	//Crear vector dinamico
+	vector <vendedor> vectorVendedor;
+	//crear el objeto 1
+	vendedor ven1;
+	ven1.codigo = "C001";
+	ven1.nombre = "Carlos";
+	ven1.apellidos = "Fonseca Oscco";
+	ven1.edad = 21;
+	ven1.sueldo = 2100;
+	//asignarr el objeto a la posicion del vectorVendedor
+	vectorVendedor.push_back(ven1); 
+	//crear el objeto 2
+	vendedor ven2;
+	ven2.codigo = "C002";
+	ven2.nombre = "Maria";
+	ven2.apellidos = "Gutierrez Bazques";
+	ven2.edad = 19;
+	ven2.sueldo = 2500;
+	//asognar
+	vectorVendedor.push_back(ven2);
+
+	//listar o imprimir
+	for (int i = 0; i <vectorVendedor.size(); i++)
+	{
+	
+		cout << vectorVendedor[i].codigo <<" "<< "\t";
+		cout << vectorVendedor[i].nombre << " " << "\t";
+		cout << vectorVendedor[i].apellidos << "   " << "\t";
+		cout << vectorVendedor[i].edad << " " << "\t";
+		cout << vectorVendedor[i].sueldo << " " << "\n";
+		
+	}
+	cout << "Forma 2\n";
+	for (vendedor rows: vectorVendedor )
+	{
+		cout << rows.codigo << "-" << rows.nombre << "-" 
+			<< rows.apellidos << "-" << rows.edad << "-" << rows.sueldo << endl;
+	}
+}
+
+//PARA INGRESAR DATOS
+
+
+#include <iostream>
+#include <vector>
+#include <string> 
+
+using namespace std;
+
+struct vendedor
+{
+	string codigo;
+	string nombre;
+	string apellidos;
+	int edad; 
+	float sueldo;
+};
+
+
+int main()
+{
+	string rpta; 
+	//Crear vector dinamico
+	vector <vendedor> vectorVendedor;
+	//crear el objeto 
+	do
+	{
+		vendedor ven;
+		cout << "Ingrese el codigo del trabajador:";
+		getline(cin,ven.codigo);
+		cout << "\n"; 
+		cout << "Ingrese el nombre del trabajador:";
+		getline(cin, ven.nombre);
+		cout << "\n";
+		cout << "Ingrese los apellidos del trabajador:";
+		getline(cin, ven.apellidos);
+		cout << "\n";
+		cout << "Ingrese la edad del trabajador:";
+		cin>> ven.edad;
+		cout << "\n";
+		cout << "Ingrese el sueldo del trabajador:";
+		cin>> ven.sueldo;
+		cout << "\n";
+		
+		//asignarr el objeto a la posicion del vectorVendedor
+		vectorVendedor.push_back(ven);
+
+		cout << "Quiere continuar registrando?(si//Si):";
+		cin >> rpta;
+		cin.ignore();//No pase error con code
+		cout << "\n";
+	} while (rpta =="Si" || rpta == "si");
+	
+	system("cls"); 
+	
+
+
+	//listar o imprimir
+	for (int i = 0; i <vectorVendedor.size(); i++)
+	{
+		cout << "Datos del empleado ("<<i+1<<")\n";
+		cout << vectorVendedor[i].codigo <<" "<< "\t";
+		cout << vectorVendedor[i].nombre << " " << "\t";
+		cout << vectorVendedor[i].apellidos << "   " << "\t";
+		cout << vectorVendedor[i].edad << " " << "\t";
+		cout << vectorVendedor[i].sueldo << " " << "\n";
+		
+	}
+	cout << "\n";
+	cout << "Forma 2\n";
+	for (vendedor a: vectorVendedor )
+	{
+		cout << a.codigo << "-" << a.nombre << "-" 
+			<< a.apellidos << "-" << a.edad << "-" << a.sueldo << endl;
+	}
+}

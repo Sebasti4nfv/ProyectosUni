@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+void asignarIndireccion() {
+    int num = 11;
+    int* punt = &num;
+    cout << "*******INDIRECCION*****" << endl;
+    *punt = 500; 
+
+    cout << endl;
+    cout << "Valor:" << num << endl;
+    cout << "Direccion de la memoria:" << &num << endl;
+    cout << "El valor del puntero es:" << punt << endl;
+    cout << "La direccion de la memoria del puntero es:" << &punt << endl;
+}
+int main()
+{
+    asignarIndireccion();
+    int numero = 10;
+    int* puntero = &numero;
+    cout << "El valor del numero es:" << numero << endl;
+    cout << " La direccion de la memoria del numero es:" << &numero << endl;
+    cout << "El valor del puntero es:" << puntero << endl;
+    cout << "La direccion de la memoria del puntero es:" << &puntero << endl;
+    cout << endl << endl;
+   
+}
+

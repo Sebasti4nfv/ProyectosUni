@@ -1,0 +1,202 @@
+#include <iostream>
+#include <vector>
+#include <cstring>
+
+using namespace std; 
+
+//Variable global//
+vector <int> vectorNota;
+//usando void// 
+void addItems(int valor)
+{
+    vectorNota.push_back(valor);
+}
+
+void ListofItems()
+{
+    cout << "Segunda forma\n";
+    for (int item : vectorNota)
+    {
+        cout << item << "\n";
+    }
+}
+int main()
+{
+    
+    int         nota,
+                  i;
+    string      rpta;
+    i = 0;
+    do
+    {
+        cout << "FILA(" << i + 1 << ")\n";
+        cout << "Ingrese nota:";
+        cin >> nota;
+
+
+       addItems(nota); //insertar elementos al vector
+
+        i++; 
+        cout << "Deseas continuar ingresando datos?(SI/si: " << endl;
+        cin >> rpta;
+        
+    } while (rpta == "SI" || rpta == "si");
+    
+    //listar
+    cout << "Primera forma\n";
+    for (int i = 0; i < vectorNota.size(); i++)
+    {
+     
+        cout << vectorNota[i]<<endl;
+    }
+  
+    ListofItems(); 
+
+} 
+
+
+
+//fuera del main //
+
+
+
+#include <iostream>
+#include <vector>
+#include <cstring>
+
+using namespace std; 
+
+//Variable global//
+
+//usando void// 
+void addItems(vector<int>&vec, int valor)
+{
+    vec.push_back(valor);
+}
+
+void ListofItems(vector<int> &vec)
+{
+    cout << "Segunda forma\n";
+    for (int item : vec)
+    {
+        cout << item << "\n";
+    }
+}
+int main()
+{
+    vector <int> vectorNota;
+    int         nota,
+                  i;
+    string      rpta;
+    i = 0;
+    do
+    {
+        cout << "FILA(" << i + 1 << ")\n";
+        cout << "Ingrese nota:";
+        cin >> nota;
+
+
+       addItems(vectorNota,nota); //insertar elementos al vector
+
+        i++; 
+        cout << "Deseas continuar ingresando datos?(SI/si: " << endl;
+        cin >> rpta;
+        
+    } while (rpta == "SI" || rpta == "si");
+    
+    //listar
+    cout << "Primera forma\n";
+    for (int i = 0; i < vectorNota.size(); i++)
+    {
+     
+        cout << vectorNota[i]<<endl;
+    }
+  
+    ListofItems(vectorNota); 
+
+} 
+
+
+//Promedio y numeros mayores al promedio
+
+
+#include <iostream>
+#include <vector>
+#include <cstring>
+
+using namespace std; 
+
+//Variable global//
+
+//usando void// 
+
+
+float promedio(vector<int>& vec)
+{
+    float suma =0;
+    for (int item : vec)
+    {
+        suma += item;
+    }
+    return suma / vec.size();
+}
+void listamayores(vector<int>& vec)
+{
+    for (int item : vec)
+    {
+        if (item > promedio(vec))
+        {
+            cout << item << "\n";
+        }
+    }
+}
+void addItems(vector<int>&vec, int valor)
+{
+    vec.push_back(valor);
+}
+
+void ListofItems(vector<int> &vec)
+{
+    cout << "Segunda forma\n";
+    for (int item : vec)
+    {
+        cout << item << "\n";
+    }
+}
+int main()
+{
+    vector <int> vectorNota;
+    int         nota,
+                  i;
+    string      rpta;
+    i = 0;
+    do
+    {
+        cout << "FILA(" << i + 1 << ")\n";
+        cout << "Ingrese nota:";
+        cin >> nota;
+
+
+       addItems(vectorNota,nota); //insertar elementos al vector
+
+        i++; 
+        cout << "Deseas continuar ingresando datos?(SI/si: " << endl;
+        cin >> rpta;
+        
+    } while (rpta == "SI" || rpta == "si");
+    
+    //listar
+    cout << "Primera forma\n";
+    for (int i = 0; i < vectorNota.size(); i++)
+    {
+     
+        cout << vectorNota[i]<<endl;
+    }
+  
+    ListofItems(vectorNota); 
+
+    cout << "El promedio es:" << promedio(vectorNota) << endl; 
+    listamayores(vectorNota); 
+} 
+
+

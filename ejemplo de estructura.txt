@@ -1,0 +1,67 @@
+GETLINE PERO CON CHAR
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Persona
+{
+    char nombre[30]; // Poner el nombre
+    char apellidos[30];
+    int edad;
+}; 
+int main()
+{
+    /*registros*/
+    Persona p;
+    cout << "Ingrese el nombre: ";
+    cin.getline(p.nombre,30); 
+    cout << "Ingrese el apellido: ";
+    cin.getline(p.apellidos, 30);
+    cout << "Ingrese la edad: ";
+    cin >> p.edad; 
+    cout << endl;
+    cout << "Datos ingresados\n";
+    cout << "NOMBRE:" << p.nombre<<endl;
+    cout << "APELLIDO:" << p.apellidos << endl;
+    cout << "EDAD:" << p.edad;
+}
+
+GETLINE PER CON STRING 
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Alumno
+{
+    string codigo;
+    string nombre;
+    string apellidos;
+    int edad; 
+}; 
+int main()
+{
+    //Crear objeto alumno - regustro Alumno
+
+    Alumno alum; 
+    //entrada de datos
+    cout << "INGRESAR EL CODIGO DEL ALUMNO: ";
+    getline(cin,alum.codigo);
+    cout << "INGRESAR EL NOMBRE DEL ALUMNO: ";
+    getline(cin, alum.nombre);
+    cout << "INGRESAR EL APELLIDO DEL ALUMNO: ";
+    getline(cin, alum.apellidos);
+    cout << "INGRESAR LA EDAD DEL ALUMNO: ";
+    cin >> alum.edad; 
+
+    //Imprimir datos 
+    cout << endl;
+     
+    cout << "Datos del alumno ingresado" << endl;
+    cout << "Codigo:" << alum.codigo << endl; 
+    cout << "Nombre:" << alum.nombre << endl;
+    cout << "Apellidos:" << alum.apellidos << endl;
+    cout << "Edad:" << alum.edad << endl; 
+}

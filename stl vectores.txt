@@ -1,0 +1,42 @@
+#include <iostream>
+#include <vector>
+#include <cstring>
+
+using namespace std; 
+int main()
+{
+    vector <int> vectorNota;
+    int         nota,
+                  i;
+    string      rpta;
+    i = 0;
+    do
+    {
+        cout << "FILA(" << i + 1 << ")\n";
+        cout << "Ingrese nota:";
+        cin >> nota;
+
+
+        vectorNota.push_back(nota); //insertar elementos al vector
+        i++; 
+        cout << "Deseas continuar ingresando datos?(SI/si: " << endl;
+        cin >> rpta;
+        
+    } while (rpta == "SI" || rpta == "si");
+    
+    //listar
+    cout << "Primera forma\n";
+    for (int i = 0; i < vectorNota.size(); i++)
+    {
+     
+        cout << vectorNota[i]<<endl;
+    }
+    cout << "Segunda forma\n";
+    for (int item : vectorNota)
+    {
+        cout << item << "\n";
+    }
+
+
+} 
+

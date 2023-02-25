@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Alumno
+{
+    string codigo;
+    string nombre;
+    string apellidos;
+    int edad; 
+}; 
+int main()
+{
+    //Crear objeto alumno - regustro Alumno
+
+    Alumno alum[4];
+    //entrada de datos
+    for (int i = 0; i < 4; i++)
+    {
+        cout << "FILA(" << i + 1 << ")\n";
+        cout << "INGRESAR EL CODIGO DEL ALUMNO: ";
+        getline(cin, alum[i].codigo);
+        cout << "INGRESAR EL NOMBRE DEL ALUMNO: ";
+        getline(cin, alum[i].nombre);
+        cout << "INGRESAR EL APELLIDO DEL ALUMNO: ";
+        getline(cin, alum[i].apellidos);
+        cout << "INGRESAR LA EDAD DEL ALUMNO: ";
+        cin >> alum[i].edad;
+        
+        cin.ignore(); // creo que para que se separe el codigo
+        system("cls"); //Borrar O limpiar
+    }
+        //Imprimir datos 
+        cout << endl;
+        cout << "******DATOS DE LOS ALUMNOS INGRESADOS*********" << endl;
+        for (int i = 0; i < 4; i++)
+        {
+           
+            cout << "Codigo     :" << alum[i].codigo << endl;
+            cout << "Nombre     :" << alum[i].nombre << endl;
+            cout << "Apellidos  :" << alum[i].apellidos << endl;
+            cout << "Edad       :" << alum[i].edad << endl;
+            cout << endl; 
+        }
+        
+}
+
