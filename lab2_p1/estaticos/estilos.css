@@ -1,0 +1,8 @@
+
+body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #faec6f;
+    padding: 0 20px 20px 20px;  /*(padding-top, padding-right, padding-bottom, padding-left).*/
+    
+  }
