@@ -1,0 +1,141 @@
+#include <iostream>
+using namespace std;
+float cantidadE, cantidadP, cantidadEM;
+float totalE, totalP, totalEM; 
+string version;
+float cantidad;
+
+string versiones()
+{
+    cout <<"Ingrese la version deseada(estudiante, profesional, empresarial):"<<endl;
+     cin >>version; 
+
+    return version;
+}
+float cantidades()
+{
+    cout <<"Ingrese la cantidad que desee comprar:" <<endl;
+    cin >>cantidad;
+
+    return cantidad; 
+}
+
+float fimporteC()
+{
+    if ( version =="estudiante")
+    {
+        return cantidad * 90; 
+    }
+    else if (version =="profesional")
+    {
+        return cantidad * 120;
+    }
+    else
+    {
+        return cantidad * 150;
+    }
+}
+
+float fDescuento(float importeC)
+{
+    if ( cantidad <10 && cantidad >0)
+    {
+        return importeC * 0.11; 
+    }
+    else if (cantidad >=10 && cantidad <20)
+    {
+        return importeC * 0.13;
+    }
+    else
+    {
+        return importeC * 0.14;
+    }
+}
+float importeP(float importeC, float Descuento)
+{
+   return importeC - Descuento; 
+}
+
+void efectuarIncrementos()
+{
+    if ( version =="estudiante")
+    {
+        cantidadE += cantidad;
+        ++totalE;  
+    }
+    else if (version =="profesional")
+    {
+       cantidadP += cantidad;
+       ++totalP;
+    }
+    else
+    {
+        cantidadEM += cantidad; 
+        ++totalEM; 
+    }
+
+}
+void mostrarR()
+{
+    cout <<"La cantidad de licencias de estudiantes compradas :"<<cantidadE<<endl; 
+    cout <<"Cuantas veces se compro la de estudiantes:" <<totalE<<endl; 
+    cout <<"La cantidad de licencias profesionales compradas:"<<cantidadP<<endl; 
+    cout <<"Cuantas veces se compro la de profesionales:" <<totalP<<endl; 
+    cout <<"La cantidad de licencias empresariales compradas :"<<cantidadEM<<endl; 
+    cout <<"Cuantas veces se compro las empresariales:" <<totalEM<<endl; 
+}
+int main()
+{
+
+    float importeC;
+    float importeD;
+    float importePagar; 
+    string rpt; 
+    bool repetir = false;
+
+  cout <<"Bienvenido a su paggina de compra de licencias"<<endl;
+cout <<"Estudiante [90]\n";
+cout <<"Profesional [120]\n";
+cout <<"Empresarial [150]\n";
+  do
+  {
+    versiones(); 
+    cantidades();
+ cout <<endl;
+    importeC =fimporteC();
+    importeD =fDescuento(importeC);
+    importePagar = importeP(importeC, importeD); 
+    
+ cout <<"Se esta comprando la licencia:" <<versiones<<endl; 
+ cout<<"La cantidad requerida es:" <<cantidad<<endl; 
+ 
+ cout <<endl;
+ 
+   
+  
+    efectuarIncrementos();
+    
+    
+    
+    
+    
+    cout <<"Desea continuar(si):";
+    cin>> rpt;
+
+
+
+
+ 
+    if (rpt == "si")
+    {
+     repetir = true;
+    }
+
+    else
+    {
+        repetir = false; 
+    }
+  } while (repetir == true); 
+
+mostrarR(); 
+}

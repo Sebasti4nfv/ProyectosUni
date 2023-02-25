@@ -1,0 +1,33 @@
+#include "alumno.h"
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    //creacion de instancia
+    Alumno alum("0001","Sebastian Fonseca",9,8);
+    //creacion de un objeto de clase
+   
+
+    //imprimir los datos alum1
+    cout << "Codigo: " << alum.getCodigo() << "\t";
+    cout << "Nombre: " << alum.getNomApe() << "\t";
+    cout << "Pc1: " << alum.getPc1() <<"\t";
+    cout << "Pc2: " << alum.getPc2() <<"\t";
+    cout << "Promedio: " << alum.getPromedio() << endl;
+    //Creacion de la instancia 2 (osea el objeto 2
+    Alumno alum2("0002","Claudia ramos",10,20);
+    //creacion de un objeto blah blah blah 2
+   
+   
+    // imprimir blah blah alum2
+    cout << endl;
+    
+    cout << "Codigo: " << alum2.getCodigo() << "\t";
+    cout << "Nombre: " << alum2.getNomApe() << "\t";
+    cout << "Pc1: " << alum2.getPc1() <<"\t";
+    cout << "Pc2: " << alum2.getPc2() <<"\t";
+    cout << "Promedio: " << alum2.getPromedio() << endl;
+}
+

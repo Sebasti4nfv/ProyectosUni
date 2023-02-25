@@ -1,0 +1,19 @@
+#pragma once
+#include <iostream>
+#include <cstring>
+#include "docente.h"
+using namespace std;
+
+class Asistente : public Docente
+{
+private:
+	string tipolab;
+
+public:
+	Asistente(int codigo, string nomApe, string tipolab) : Docente(codigo,
+															nomApe)
+	{
+		this->tipolab = tipolab; 
+		
+	}
+};

@@ -1,0 +1,140 @@
+#include<iostream>
+using namespace std;
+
+/*
+Variables globales
+*/
+int cantidadP1, cantidadP2, cantidadP3;
+float totalP1, totalP2, totalP3;
+
+/*
+Identificar los parametros de la funcion
+*/
+float fImporteDeLaCompra(string producto, int cantidad)
+{
+	if (producto == "p1")
+	{
+		return 15 * cantidad;
+	}
+	else if (producto == "p2")
+	{
+		return 17.5 * cantidad;
+	}
+	else if (producto == "p3")
+	{
+		return 20 * cantidad;
+	}
+	else
+	{
+		cout << "Ingresar solamente:p1 - p2 - p3!!!";
+	}
+}
+
+float fImporteDelDescuento(int cantidad, float importeDeLaCompra)
+{
+	if (cantidad > 10)
+	{
+		return 0.15 * importeDeLaCompra;
+	}
+	else
+	{
+		return 0.07 * importeDeLaCompra;
+	}
+}
+float fImporteAPagar(
+	float importeDeLaCompra,
+	float  importeDelDescuento
+)
+{
+	return importeDeLaCompra - importeDelDescuento;
+}
+
+void efectuarincrementos(string producto, int cantidad, float importeAPagar) 
+{
+	if (producto == "p1")
+	{
+		cantidadP1 += cantidad;
+		totalP1 += importeAPagar;
+	}
+	else if (producto == "p2")
+	{
+		cantidadP2 += cantidad;
+		totalP2 += importeAPagar;
+	}
+	else if (producto == "p3")
+	{
+		cantidadP3 += cantidad;
+		totalP3 += importeAPagar;
+	}
+	else
+	{
+		cout << "Error p\n"; 
+	}
+}
+
+void imprimirResultados(float importeDeLaCompra, float importeDelDescuento, float importeAPagar)
+{
+	cout << "Importe de la compra:" << importeDeLaCompra << endl;
+	cout << "Importe del descuento:" << importeDelDescuento << endl;
+	cout << "Importe a pagar:" << importeAPagar << endl;
+}
+int main()
+{
+	//Declaracion de variables
+	string	producto;
+	int 	cantidad;
+	float	importeDelDescuento;
+	float	importeDeLaCompra;
+	float	importeAPagar;
+	bool	bandera = false;
+	string	respuesta;
+	//Entrada
+	do
+	{
+		cout << "Ingresar el codigo del producto:";
+		cin >> producto;
+		cout << "Ingresar la cantidad:";
+		cin >> cantidad;
+
+		//Importe de la compra
+		importeDeLaCompra = fImporteDeLaCompra(producto, cantidad);
+		//Fin - IC
+		//Importe del descuento
+		importeDelDescuento = fImporteDelDescuento(cantidad, importeDeLaCompra);
+		//Fin - ID
+		//Importe a Pagar
+		importeAPagar = fImporteAPagar(importeDeLaCompra, importeDelDescuento);
+		//Fin - IP
+		//Mostrar Resultados
+		imprimirResultados(importeDeLaCompra, importeDelDescuento, importeAPagar);
+		efectuarincrementos(producto,cantidad, importeAPagar);
+		cout << "*******************************************************************\n";
+
+		cout << "Deseas ingresar otro producto(SI):";
+		cin >> respuesta;
+
+		cout << "*******************************************************************\n";
+
+		cout << "\n";
+
+		if (respuesta == "si")
+		{
+			bandera = true;
+		}
+		else
+		{
+			bandera = false;
+		}
+	} while (bandera == true);
+	//proceso
+	cout << "Reporte de cierre de caja: \n";
+	cout << "**************************\n";
+
+	cout << "Cantidad de total del producto P1:" << cantidadP1 << endl;
+	cout << "Cantidad de total del producto P2:" << cantidadP2 << endl;
+	cout << "Cantidad de total del producto P3:" << cantidadP3 << endl;
+	
+	cout << "***************************\n"; 
+	//Salida
+
+}

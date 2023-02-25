@@ -1,0 +1,64 @@
+#include "alumno.h"
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    //creacion de instancia
+    Alumno alum;
+    //creacion de un objeto de clase
+    alum.setCodigo("00101"); 
+    alum.setNomApe("Sebastian Fonseca");
+    alum.setPc1(9);
+    alum.setPC2(8);
+
+    //imprimir los datos
+    cout << "Codigo: " << alum.getCodigo() << endl;
+    cout << "Nombre: " << alum.getNomApe() << endl;
+    cout << "Pc1: " << alum.getPc1() << endl;
+    cout << "Pc2: " << alum.getPc2() << endl;
+}
+
+
+//LO MISMO PERO CON PROMEDIO Y OTRO OBJE
+
+#include "alumno.h"
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    //creacion de instancia
+    Alumno alum;
+    //creacion de un objeto de clase
+    alum.setCodigo("00101");
+    alum.setNomApe("Sebastian Fonseca");
+    alum.setPc1(9);
+    alum.setPC2(8);
+
+    //imprimir los datos alum1
+    cout << "Codigo: " << alum.getCodigo() << "\t";
+    cout << "Nombre: " << alum.getNomApe() << "\t";
+    cout << "Pc1: " << alum.getPc1() <<"\t";
+    cout << "Pc2: " << alum.getPc2() <<"\t";
+    cout << "Promedio: " << alum.getPromedio() << endl;
+    //Creacion de la instancia 2 (osea el objeto 2
+    Alumno alum2;
+    //creacion de un objeto blah blah blah 2
+    alum2.setCodigo("0020");
+    alum2.setNomApe("Nombre Generico");
+    alum2.setPc1(10);
+    alum2.setPC2(18);
+   
+    // imprimir blah blah alum2
+    cout << endl;
+    
+    cout << "Codigo: " << alum2.getCodigo() << "\t";
+    cout << "Nombre: " << alum2.getNomApe() << "\t";
+    cout << "Pc1: " << alum2.getPc1() <<"\t";
+    cout << "Pc2: " << alum2.getPc2() <<"\t";
+    cout << "Promedio: " << alum2.getPromedio() << endl;
+}
+

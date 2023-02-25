@@ -1,0 +1,140 @@
+ACA LOS SET AND GET SE COMPLETAN FUERA DE LA CLASE / ES MAS ORDENADO
+
+#pragma once
+#include <iostream>
+#include <cstring>
+using namespace std;
+class Alumno
+{
+	//variables
+private:
+	string codigo;
+	string nomApe;
+	float pc1;
+	float pc2;
+
+public:
+	
+	//constructor
+
+	//modificadores
+ 
+	//set
+	void setCodigo(string cod);
+	void setNomApe(string nApe);
+	void setPc1(float n1);
+	void setPC2(float n2);
+	//get
+	string getCodigo();
+	string getNomApe();
+	float getPc1();
+	float getPc2();
+ };
+//set global
+void Alumno::setCodigo(string cod)
+{
+	codigo = cod; 
+}
+void Alumno::setNomApe(string nApe)
+{
+	nomApe = nApe;
+}
+void Alumno::setPc1(float n1)
+{
+	pc1 = n1;
+}
+void Alumno::setPC2(float n2)
+{
+	pc2 = n2; 
+}
+//get global o como lo haria jose xd
+string Alumno::getCodigo()
+{
+	return codigo; 
+}
+string Alumno::getNomApe()
+{
+	return nomApe; 
+}
+float Alumno::getPc1()
+{
+	return pc1;
+}
+float Alumno::getPc2()
+{
+	return pc2; 
+}
+
+// LO MISMO PERO CON PROMEDIO Y OTRO OBJETO EN EL MAIN
+
+#pragma once
+#include <iostream>
+#include <cstring>
+using namespace std;
+class Alumno
+{
+	//variables
+private:
+	string codigo;
+	string nomApe;
+	float pc1;
+	float pc2;
+
+public:
+	
+	//constructor
+
+	//modificadores
+ 
+	//set
+	void setCodigo(string cod);
+	void setNomApe(string nApe);
+	void setPc1(float n1);
+	void setPC2(float n2);
+	//get
+	string getCodigo();
+	string getNomApe();
+	float getPc1();
+	float getPc2();
+	//operaciones
+	float getPromedio();
+ };
+//set global
+void Alumno::setCodigo(string cod)
+{
+	codigo = cod; 
+}
+void Alumno::setNomApe(string nApe)
+{
+	nomApe = nApe;
+}
+void Alumno::setPc1(float n1)
+{
+	pc1 = n1;
+}
+void Alumno::setPC2(float n2)
+{
+	pc2 = n2; 
+}
+//get global o como lo haria jose xd
+string Alumno::getCodigo()
+{
+	return codigo; 
+}
+string Alumno::getNomApe()
+{
+	return nomApe; 
+}
+float Alumno::getPc1()
+{
+	return pc1;
+}
+float Alumno::getPc2()
+{
+	return pc2; 
+}
+//operaciones 
+float Alumno::getPromedio()
+{
+	return (pc1 + pc2) / 2;
+}

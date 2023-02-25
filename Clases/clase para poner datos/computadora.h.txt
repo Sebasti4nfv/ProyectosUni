@@ -1,0 +1,67 @@
+#pragma once
+#include <iostream>
+#include <string>
+using namespace std; 
+
+class Computadora
+{
+private:
+	int codigo;
+	string marca;
+	string color;
+	double precio;
+public:
+
+	Computadora(int cod, string mar, string col, double pre)
+	{
+		codigo = cod;
+		marca = mar;
+		color = col;
+		precio = pre;
+	}
+	Computadora() {
+
+	}
+	~Computadora() {
+
+	}
+	//set
+	void setCodigo(int valor) 
+	{
+		codigo = valor;
+	}
+	void setMarca(string valor)
+	{
+		marca = valor;
+	}
+	void setColor(string valor)
+	{
+		color = valor;
+	}
+	void setPrecio(double valor)
+	{
+		precio = valor;
+	}
+	//get
+	int getCodigo() {
+		return codigo;
+	}
+	string getMarca() {
+		return marca;
+	}
+	string getColor() {
+		return color;
+	}
+	double getPrecio() {
+		return precio; 
+	}
+	//operacion
+	float precioSoles()
+	{
+		return precio * 2.58;
+	}
+	float precioEuros()
+	{
+		return precio * 0.8; 
+	}
+};

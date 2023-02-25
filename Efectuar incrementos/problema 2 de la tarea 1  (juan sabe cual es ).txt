@@ -1,0 +1,111 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+    string producto;
+    int cantidad;
+    float IP;
+    int c1,c2,c3;
+    float p1,p2,p3;
+    int total;
+    float ptotal;
+
+string getMarca()
+    {
+
+        cout<<"Ingrese la marca que desea adquirir:"<<endl;
+        cin>> producto;
+        return producto;
+        
+    }
+int getCantidad()
+    {
+        cout<<"Ingrese la cantidad de botellas :"<<endl;
+        
+        cin>>cantidad;
+        return cantidad; 
+    }
+float ImportePagar()
+    {
+        if(producto == "Gloria")
+        {
+            IP= 4.9 * cantidad;
+            cout<<"El Importe a pagar es:"<<IP<<endl;
+            
+        }
+        if(producto == "Laive")
+        {
+            IP= 5.2 * cantidad;
+            cout<<"El Importe a pagar es:"<<IP<<endl;
+        }
+        if(producto == "Puravida")
+        {
+            IP= 4.5 * cantidad;
+            cout<<"El Importe a pagar es:"<<IP<<endl;
+        }
+        else
+        {
+            cout<<"Ingrese solo las marcas mencionadas"<<endl;
+        }
+    }
+void EfectuarIncrementos()
+{
+    if(producto =="Gloria")
+    {
+        c1+=cantidad;
+        p1+=IP;
+    }
+    else if(producto =="Laive")
+    {
+        c2+=cantidad;
+        p2+=IP;
+    }
+    else if(producto =="Puravida")
+    {
+        c3+=cantidad;
+        p3+=IP;
+    }
+    else
+    {
+        cout << "Error p\n";
+    }
+    
+}
+
+int main()
+{
+    bool vaso = false;
+    string rpt;
+    cout<<"*************"<<endl;
+    cout<<"Marca de yogurt      Precio por litro"<<endl;
+    cout<<"     Gloria                  4.9     "<<endl;
+    cout<<"     Laive                   5,2     "<<endl;
+    cout<<"     PuraVida               4.5     "<<endl;
+    cout<<"*************"<<endl;
+    
+   do
+   {
+    getMarca();
+    getCantidad();
+    ImportePagar();
+    EfectuarIncrementos();
+    
+        cout<<"Desea añadir otra marca(Si/No):"<<endl;
+        cin>>rpt;
+        
+        if(rpt == "Si")
+        {
+            vaso=true;
+        }
+        else
+        {
+            vaso=false;
+        }
+   }
+   while (vaso == true);
+   
+   cout << "Cantidad de total de Gloria:" << c1 << endl;
+	cout << "Cantidad de total del Laive:" << c2 << endl;
+	cout << "Cantidad de total del PuraVida:" << c3 << endl; 
+	cout <<"El total de productos comprados es de:" <<c1 + c2 +c3<<endl; 
+}

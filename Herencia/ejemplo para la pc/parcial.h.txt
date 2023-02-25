@@ -1,0 +1,19 @@
+#pragma once
+#include <iostream>
+#include <cstring>
+#include "docente.h"
+using namespace std;
+
+class Parcial : public Docente
+{
+private:
+	int cantiHoras;
+	float costo;
+public :
+	Parcial(int codigo, string nomApe, int cantiHoras, float costo) : Docente(codigo, 
+																			  nomApe)
+	{
+		this->cantiHoras = cantiHoras;
+		this->costo = costo;
+	}
+};

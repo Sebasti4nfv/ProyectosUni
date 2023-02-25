@@ -1,0 +1,19 @@
+#pragma once
+#include <iostream>
+#include <cstring>
+#include "docente.h"
+using namespace std;
+
+class Estable : public Docente
+{
+private:
+	int cantiCerti;
+
+public:
+	Estable(int codigo, string nomApe, int cantiCerti) : Docente(codigo,
+		nomApe)
+	{
+		this->cantiCerti = cantiCerti;
+
+	}
+};

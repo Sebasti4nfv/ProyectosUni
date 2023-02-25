@@ -1,0 +1,65 @@
+#pragma once
+#include <iostream>
+#include <cstring>
+using namespace std;
+class Alumno
+{
+	//variables
+private:
+	string codigo;
+	string nomApe;
+	float pc1;
+	float pc2;
+
+public:
+	
+	//constructor
+	Alumno(string,string,float,float);
+	Alumno(); 
+	//modificadores
+ 
+	//set
+	
+	//get
+	string getCodigo();
+	string getNomApe();
+	float getPc1();
+	float getPc2();
+	//operaciones
+	float getPromedio();
+ };
+//implementacion del contructor
+Alumno::Alumno(string codigo, string nomApe, float pc1, float pc2)
+{
+	this->codigo = codigo;
+	this ->nomApe = nomApe;  
+	this -> pc1 = pc1; 
+	this -> pc2 = pc2;  
+}
+Alumno:: Alumno() 
+{
+}
+//set global
+
+//get global o como lo haria jose xd
+string Alumno::getCodigo()
+{
+	return codigo; 
+}
+string Alumno::getNomApe()
+{
+	return nomApe; 
+}
+float Alumno::getPc1()
+{
+	return pc1;
+}
+float Alumno::getPc2()
+{
+	return pc2; 
+}
+//operaciones 
+float Alumno::getPromedio()
+{
+	return (this->pc1 + this->pc2) / 2;
+}

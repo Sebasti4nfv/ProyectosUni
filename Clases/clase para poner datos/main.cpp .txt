@@ -1,0 +1,55 @@
+#include <iostream>
+#include "computadora.h"
+using namespace std;
+
+int main() 
+{
+	//declarar variables
+	int cod;
+	string mar;
+	string col;
+	double pre;
+	float descuento;
+	float total;
+
+	Computadora operacion; 
+
+	cout << "Computadoras:"<<endl; 
+	cout << endl << endl;
+	cout << "Mencione el codigo del producto:" << endl;
+	cin >> cod; 
+	cout << "Diga la marca de la computadora deseada:" << endl;
+	cin >> mar;
+	cout << "En que color estara el producto?:" << endl;
+	cin >> col;
+	cout << "Ingrese el precio que desea ponerle al producto" << endl;
+	cin >> pre; 
+
+
+	descuento = pre * 0.10;
+	total = pre - descuento; 
+
+	operacion.setCodigo(cod);
+	operacion.setMarca(mar);
+	operacion.setColor(col);
+	operacion.setPrecio(pre); 
+
+	//operacion 
+
+	//Imprimir
+
+	cout << "************Detalles finales ingresados**************"; 
+	cout << endl; 
+	cout << "Usted ingreso estos datos" << endl; 
+	cout << endl;
+	cout << "Codigo del producto:"<< operacion.getCodigo() << endl;
+	cout << "Marca del producto:" << operacion.getMarca() << endl;
+	cout << "Color del producto:" << operacion.getColor() << endl;
+	cout << "Precio del producto:" << operacion.getPrecio() << endl;
+
+	cout << endl << endl;
+	cout << "El precio en soles es de:" << operacion.precioSoles() << endl;
+	cout << "El precio en euros es de:" << operacion.precioEuros() << endl; 
+	cout << "El precio con un descuento del 10 porciento es de: " << total << endl;
+
+}
