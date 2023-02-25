@@ -1,0 +1,71 @@
+html{
+	font-family: 'Roboto Slab',Serif;
+	background-color:#00539F;
+}
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #FF9500;
+  padding: 0 20px 20px 20px;  /*(padding-top, padding-right, padding-bottom, padding-left).*/
+  border: 5px solid black;
+}
+h1 {
+  margin: 0;
+  padding: 20px 0;    /*relleno arriba y abajo del título de 20 pixeles*/
+  color: #00539F;
+  text-shadow: 3px 3px 1px black;
+}
+
+a{
+    color:#3342FF;/*#57ABB8;*/
+    font-weight:bold;
+    text-decoration:none;/*quitar el color azul a los enlaces*/
+}
+a:hover{/*cuando pasamos el mouse sobre el enlace le ponemos en color del color*/
+ color:#f60;
+}
+header img,h1{
+	display:inline-block; 
+}
+nav ul {
+    list-style:none;/*quitar las viñetas*/   
+}
+    nav li {
+        display:inline-block;
+        padding:0.1em;
+        vertical-align:top;
+    }
+
+    nav a {
+        background :#3352FF;
+        /*background :#FFFFFF;
+        background :#032039;/*#070229;*/
+        border:0.1em groove #FFFFFF;
+        /*border:0.1em solid #57ABB8;/*anterior*/
+        border-radius:0.25em;
+        /*color:#0099CC;/*naranja*/
+        color:White;/*naranja*/
+
+        display:block;
+        font-size:1.0em;
+        /*text-transform:uppercase ;*/
+        padding:0.2em;
+        -ms-transition:all 0.5s ease-in;/*5 segundos para la animación el tipo de efecto ease-in*/
+        -moz-transition:all 0.5s ease-in;/*5 segundos para la animación el tipo de efecto ease-in*/
+        -o-transition:all 0.5s ease-in;/*5 segundos para la animación el tipo de efecto ease-in*/
+        -webkit-transition:all 0.5s ease-in;/*5 segundos para la animación el tipo de efecto ease-in*/
+        transition:all 0.5s ease-in;/*5 segundos para la animación el tipo de efecto ease-in(aceleracion al inicio del efecto)*/
+    }
+        nav a:hover {
+        /*background:#569AFF;*/
+        background:#A233FF;/*#33332B;*/
+        border:0.1em groove #FF33F6;/*#33332B;/*#569AFF;*/
+        /*border:0.1em groove #F60;/*DASHED es una liena discontinua
+        border-radius:0 0.5em 0 0.5em;/*es para los cuatrom bordes de la caja, empezando del superior izquierdo que es cero, luego el superior derecho*/
+        color:#FFF;/*blanco*/
+        -ms-transition:all 0.5s ease-out;/*5 segundos para la animación el tipo de efecto ease-in*/
+        -moz-transition:all 0.5s ease-out;/*5 segundos para la animación el tipo de efecto ease-in*/
+        -o-transition:all 0.5s ease-out;/*5 segundos para la animación el tipo de efecto ease-in*/
+        -webkit-transition:all 0.5s ease-out;/*5 segundos para la animación el tipo de efecto ease-in*/
+        transition:all 0.5s ease-out;/*5 segundos para la animación el tipo de efecto ease-in*/
+        }
