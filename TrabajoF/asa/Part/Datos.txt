@@ -1,0 +1,5 @@
+Dni:11111111;Nombres:Carlos;Apellidos:Rigoberto;Edad:29;Direccion:Su casa
+Dni:11111111;Nombres:Car;Apellidos:Fe;Edad:23;Direccion:av t
+Dni:11111111;Nombres:Sebastian;Apellidos:Fonseca;Edad:20;Direccion:AV. La fontana
+Dni:76146980;Nombres:Sebastian;Apellidos:Fonseca;Edad:12;Direccion:av.Santa Clara
+Dni:11111111;Nombres:Sebas;Apellidos:Fonseca;Edad:23;Direccion:av.toulon

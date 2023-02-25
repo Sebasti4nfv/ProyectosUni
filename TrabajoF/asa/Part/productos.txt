@@ -1,0 +1,17 @@
+11111111;Hamburgesa Clasica;8.0;2.0;,Ketchup,Mostaza;16.0
+11111111;Hamburgesa Royal;10.0;1.0;,Ketchup,Mostaza;10.0
+11111111;Hamburgesa Royal;10.0;2.0;,Mostaza,Tartara;20.0
+11111111;Pollo Desilachado;8.0;1.0;,Mostaza,Tartara;8.0
+11111111;Pollo Desilachado;8.0;2.0;,Mostaza,Tartara;16.0
+11111111;Hamburguesa Doble;12.0;2.0;,Mostaza,Tartara;24.0
+11111111;Hamburguesa Especial;15.0;2.0;,Mostaza,Tartara;30.0
+76146980;Hamburgesa Royal;10.0;1.0;,Ketchup,Mostaza;10.0
+76146980;Pollo Desilachado;8.0;1.0;,Ketchup,Mostaza;8.0
+11111111;Hamburgesa Clasica;8.0;1.0;,Mostaza,Tartara;8.0
+11111111;Hamburgesa Royal;10.0;1.0;,Mostaza,Tartara;10.0
+11111111;Hamburgesa Clasica;8.0;2.0;,Ketchup,Mostaza;16.0
+11111111;Hamburgesa Royal;10.0;1.0;,Ketchup,Mostaza;10.0
+11111111;Hamburgesa Clasica;8.0;1.0;,Ketchup,Mostaza;8.0
+11111111;Hamburgesa Royal;10.0;1.0;,Ketchup,Mostaza;10.0
+11111111;Hamburgesa Clasica;8.0;1.0;,Mostaza,Tartara;8.0
+11111111;Hamburgesa Royal;10.0;1.0;,Mostaza,Tartara;10.0

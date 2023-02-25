@@ -1,0 +1,39 @@
+// recursividad1.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//
+
+#include <iostream>
+#include<conio.h>
+using namespace std;
+
+int potencia(int,int);
+
+int main()
+{
+    int n1, n2;
+
+    do 
+    {
+        cout << "Digite el numero a elevar: ";
+        cin >> n1;
+        cout << "Digite el numero que es la potencia:";
+        cin >> n2;
+    } while (n1 <= 0 || n2 <= 0);
+
+    cout << endl << "El resultado de la potencia de "<<n1<<" elevado a "<<n2<<"es : " << potencia(n1,n2);
+   
+}
+
+int potencia(int n1, int n2)
+
+{
+    int pot;
+    if (n2 == 1)//caso base
+    {
+        pot = n1;
+    }
+    else//recursiva
+    {
+        pot = n1 * potencia(n1,n2 - 1);
+    }
+    return pot; 
+}

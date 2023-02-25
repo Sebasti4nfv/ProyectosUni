@@ -1,0 +1,11 @@
+11111111;Agua Mineral;3.0;2;Helada;6.0
+11111111;Inca Kola;4.0;1;Sin helar;4.0
+11111111;Inca Kola;4.0;2;Helada;8.0
+11111111;Coca Cola;4.0;1;Sin helar;4.0
+11111111;Inca Kola;4.0;2;Helada;8.0
+76146980;Coca Cola;4.0;2;Helada;8.0
+76146980;Sprite;3.0;1;Sin helar;3.0
+11111111;Agua Mineral;3.0;1;Helada;3.0
+11111111;Inca Kola;4.0;1;Helada;4.0
+11111111;Coca Cola;4.0;2;Sin helar;8.0
+11111111;Sprite;3.0;2;Helada;6.0

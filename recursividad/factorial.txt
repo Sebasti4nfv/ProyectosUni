@@ -1,0 +1,26 @@
+#include <iostream>
+#include<conio.h>
+using namespace std;
+
+
+int main()
+{
+    
+    int factorial(int);
+
+    cout << "Factorial: " << factorial(5);
+   
+}
+
+int factorial(int n)
+{
+    if (n == 0)//caso base
+    {
+        n = 1;
+    }
+    else//recursiva
+    {
+       n = n* factorial(n - 1); 
+    }
+    return n; 
+}
