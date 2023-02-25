@@ -1,0 +1,10 @@
+Peso: 45.6 Altura: 1.65 Imc: 16.75 Estado: Bajo peso 
+Peso: 50.0 Altura: 1.59 Imc: 19.78 Estado: Peso saludable 
+Peso: 75.36 Altura: 1.723 Imc: 25.38 Estado: Sobrepeso 
+Peso: 40.96 Altura: 1.55 Imc: 17.05 Estado: Bajo peso 
+Peso: 86.0 Altura: 1.8 Imc: 26.54 Estado: Sobrepeso 
+Peso: 86.0 Altura: 1.8 Imc: 26.54 Estado: Sobrepeso 
+Peso: 86.0 Altura: 1.8 Imc: 26.54 Estado: Sobrepeso 
+Peso: 80.0 Altura: 1.5 Imc: 35.56 Estado: Obesidad 
+Peso: 100.0 Altura: 22.0 Imc: 0.21 Estado: Bajo peso 
+Peso: 1.0 Altura: 1.0 Imc: 1.0 Estado: Bajo peso 
